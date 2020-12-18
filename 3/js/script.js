@@ -31,6 +31,7 @@ var somma = 0;
 var i= 0;
 
 do{
+  //Chiedo all'utente di inserire 5 numeri e poi li sommo
   numero = parseInt(prompt('Inserisci un numero'));
   somma += numero;
    i++;
