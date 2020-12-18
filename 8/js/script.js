@@ -1,12 +1,13 @@
-var firstNumber = parseInt(prompt('Inserisci un numero'));
-var secondNumber = parseInt(prompt('Inserisci un altro numero'));
+var numero = prompt('Inserisci un numero di 4 cifre');
 
-if(isNaN(firstNumber) || isNaN(secondNumber)){
-  console.log('Devi inserire un numero');
+var somma = 0;
+
+if(numero.length !== 4){
+  alert ('Per favore inserisci un numero di 4 cifre');
 }else{
-  if(firstNumber > secondNumber){
-    console.log(firstNumber);
-  }else{
-    console.log(secondNumber);
+  for(var i = 0; i < numero.length; i++){
+    somma += parseInt(numero[i]);
+
   }
+console.log(somma);
 }
