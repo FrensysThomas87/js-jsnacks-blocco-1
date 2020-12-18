@@ -1,12 +1,20 @@
-var firstNumber = parseInt(prompt('Inserisci un numero'));
-var secondNumber = parseInt(prompt('Inserisci un altro numero'));
+var numero = prompt('Inserisci un numero di 10 cifre');
 
-if(isNaN(firstNumber) || isNaN(secondNumber)){
-  console.log('Devi inserire un numero');
+var somma = 0;
+
+var media = 0;
+
+if(numero.length !== 10){
+  alert('Il numero deve essere di 10 cifre');
 }else{
-  if(firstNumber > secondNumber){
-    console.log(firstNumber);
-  }else{
-    console.log(secondNumber);
+  for(var i = 0; i < numero.length; i++){
+    somma += parseInt(numero[i]);
+    media = somma / 10;
   }
+
+  console.log('La somma è ' + somma);
+  console.log('La media è ' + media);
+
+
+
 }
