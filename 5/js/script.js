@@ -1,12 +1,11 @@
-var firstNumber = parseInt(prompt('Inserisci un numero'));
-var secondNumber = parseInt(prompt('Inserisci un altro numero'));
+var arrVuoto = [];
+var numero;
 
-if(isNaN(firstNumber) || isNaN(secondNumber)){
-  console.log('Devi inserire un numero');
-}else{
-  if(firstNumber > secondNumber){
-    console.log(firstNumber);
-  }else{
-    console.log(secondNumber);
+for(var i = 0; i < 6; i++){
+  numero = parseInt(prompt('Inserisci un numero'));
+  if(numero % 2 !== 0){
+    arrVuoto.push(numero);
   }
 }
+
+console.log(arrVuoto);
