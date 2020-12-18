@@ -1,12 +1,19 @@
-var firstNumber = parseInt(prompt('Inserisci un numero'));
-var secondNumber = parseInt(prompt('Inserisci un altro numero'));
+var listaInvitati = ['Pippo', 'Pluto', 'Paperino', 'Topolino'];
+var nomeUtente = prompt('Come ti chiami?');
+nomeUtente = nomeUtente.charAt(0).toUpperCase() + nomeUtente.substring(1).toLowerCase();
 
-if(isNaN(firstNumber) || isNaN(secondNumber)){
-  console.log('Devi inserire un numero');
-}else{
-  if(firstNumber > secondNumber){
-    console.log(firstNumber);
-  }else{
-    console.log(secondNumber);
+var invitato;
+
+
+
+for(var i = 0; i < listaInvitati.length && !invitato; i++){
+  if(listaInvitati[i] === nomeUtente){
+    invitato = true;
   }
+}
+
+if(invitato){
+  console.log('Puoi entrare');
+}else{
+  console.log('Non puoi entrare');
 }
